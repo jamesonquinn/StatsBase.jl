@@ -452,6 +452,7 @@ mean(x, weights(w))
 ```
 """
 mean(A::AbstractArray, w::AbstractWeights) = sum(A, w) / sum(w)
+mean(A::AbstractArray, w::AbstractWeights, dim::Int) = sum(A, w, dim) / sum(w)
 
 """
     mean(R::AbstractArray, , A::AbstractArray, w::AbstractWeights[, dim::Int])
